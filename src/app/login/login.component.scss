@@ -1,0 +1,43 @@
+mat-card {
+    width: 100%;
+  }
+  
+  mat-spinner{
+      margin: auto;
+  }
+  
+  mat-form-field, textarea {
+    width: 300px;
+  }
+
+  button{
+    background-color: #61acb3;
+    color: white;
+    border-radius: 15px;
+    width: 300px;
+  }
+
+  .no-hover-effect.mat-button.mat-primary .mat-button-focus-overlay,
+.no-hover-effect.mat-button.mat-accent .mat-button-focus-overlay,
+.no-hover-effect.mat-button.mat-warn .mat-button-focus-overlay
+{
+  background-color: #61acb3;
+}
+
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+  }
+  .push {
+      margin-left: auto;
+  }
+       
+
+  @media(max-width: 800px){
+    mat-form-field, textarea {
+      width: 200px;
+    }
+  }
+  

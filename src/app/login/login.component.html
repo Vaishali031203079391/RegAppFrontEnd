@@ -1,0 +1,40 @@
+    <mat-spinner mode="indeterminate" *ngIf="isLoading" fxLayoutAlign="center center"></mat-spinner>
+    <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading" fxLayout="column" fxLayoutAlign="center center">
+
+      <h1>Welcome back!</h1>
+      <p>Please login into your account</p>
+
+      <br>
+      <br>
+  
+      <mat-form-field>
+        <input matInput type="email" placeholder="E-Mail" name="email" ngModel #emailInput="ngModel" required email />
+        <mat-error *ngIf="emailInput.invalid">Please Enter a Valid Email</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" name="password" ngModel #passwordInput="ngModel" required />
+        <mat-error *ngIf="passwordInput.invalid">Please Enter a Valid Password</mat-error>
+      </mat-form-field>
+
+      <br>
+      <br>
+
+        <div class="box">
+            <div>
+                <mat-checkbox class="example-margin">Remember me!</mat-checkbox>
+            </div>
+
+            <div class="push">
+                <p><a>Forgot Password!</a></p>
+            </div>
+          </div>
+
+          <br>
+          <br>
+          
+          <button mdbBtn type="button" color="cyan" mdbWavesEffect size="lg" type="submit" *ngIf="!isLoading">Login</button>
+      <mat-spinner mode="indeterminate" *ngIf="isLoading" fxLayoutAlign="center center"></mat-spinner>
+    </form>
+
+  

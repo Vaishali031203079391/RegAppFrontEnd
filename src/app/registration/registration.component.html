@@ -1,0 +1,81 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="full" fxHide.lt-md>
+
+    <h1>Please Register With Us!!</h1>
+    <br>
+    <br>
+    <br>
+      <mat-spinner mode="indeterminate" *ngIf="isLoading" fxLayoutAlign="center center"></mat-spinner>
+      <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading" fxLayout="column" fxLayoutAlign="center center">
+
+              <mat-form-field>
+                <input matInput type="text" placeholder="Name" name="name" ngModel #nameInput="ngModel" required />
+                <mat-error *ngIf="nameInput.invalid">Please Enter Your Name</mat-error>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput type="text" placeholder="Phone" name="phone" ngModel #phoneInput="ngModel" required />
+                <mat-error *ngIf="phoneInput.invalid">Please Enter a Valid Phone Number</mat-error>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput type="email" placeholder="E-Mail" name="email" ngModel #emailInput="ngModel" required email />
+                <mat-error *ngIf="emailInput.invalid">Please Enter a Valid Email</mat-error>
+              </mat-form-field>
+      
+            <mat-form-field>
+              <input matInput type="password" placeholder="Password" name="password" ngModel #passwordInput="ngModel" required />
+              <mat-error>Please Enter a Valid Password</mat-error>
+            </mat-form-field>
+
+            <br>
+            <br>
+            <br>
+
+            <p><a routerLink='/login'>Login</a></p>
+          
+          <button mdbBtn type="button" color="cyan" mdbWavesEffect size="lg" type="submit" *ngIf="!isLoading">Register</button>
+          <mat-spinner mode="indeterminate" *ngIf="isLoading" fxLayoutAlign="center center"></mat-spinner>
+  </form>
+  </div>
+  
+  <div fxLayout="column" fxLayoutAlign="center center" class="half"  fxHide.gt-sm>
+    <h1>Please Register With Us!!</h1>
+    <br>
+    <br>
+    <br>
+      <mat-spinner mode="indeterminate" *ngIf="isLoading" fxLayoutAlign="center center"></mat-spinner>
+      <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading" fxLayout="column" fxLayoutAlign="center center">
+  
+        <div fxLayout="column" fxLayoutAlign="center center" class="flex-container-box">
+  
+          <mat-form-field>
+            <input matInput type="text" placeholder="Name" name="name" ngModel #nameInput="ngModel" required />
+            <mat-error *ngIf="nameInput.invalid">Please Enter Your Name</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput type="text" placeholder="Phone" name="phone" ngModel #phoneInput="ngModel" required />
+            <mat-error *ngIf="phoneInput.invalid">Please Enter a Valid Phone Number</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput type="email" placeholder="E-Mail" name="email" ngModel #emailInput="ngModel" required email />
+            <mat-error *ngIf="emailInput.invalid">Please Enter a Valid Email</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" name="password" ngModel #passwordInput="ngModel" required />
+            <mat-error>Please Enter a Valid Password</mat-error>
+          </mat-form-field>
+  
+        </div>
+
+        <br>
+            <br>
+            <br>
+        <button mdbBtn type="button" color="cyan" mdbWavesEffect size="lg" type="submit" *ngIf="!isLoading">Register</button>
+        <mat-spinner mode="indeterminate" *ngIf="isLoading" fxLayoutAlign="center center"></mat-spinner>
+      </form>
+  </div>
+  
+  

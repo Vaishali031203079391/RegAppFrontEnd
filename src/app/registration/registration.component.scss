@@ -1,0 +1,62 @@
+mat-card {
+    width: 100%;
+  }
+  
+  mat-form-field, textarea {
+    width: 300px;
+  }
+  
+  mat-spinner{
+      margin: auto;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .half{
+      display: none;
+  }
+
+  button{
+    background-color: #61acb3;
+    color: white;
+    border-radius: 15px;
+    width: 300px;
+  }
+
+  .no-hover-effect.mat-button.mat-primary .mat-button-focus-overlay,
+.no-hover-effect.mat-button.mat-accent .mat-button-focus-overlay,
+.no-hover-effect.mat-button.mat-warn .mat-button-focus-overlay
+{
+  background-color: #61acb3;
+}
+
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+  }
+  .push {
+      margin-left: auto;
+  }
+  
+  
+  @media (max-width: 800px) {
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .full{
+        display: none;
+    }
+  
+    mat-form-field, textarea {
+      width: 200px;
+    }
+  
+  }
+  
